@@ -50,7 +50,7 @@ const HomePage = () => {
             image={prod.image}
             price={prod.price}
             name={prod.name}
-            produ={prod}
+            produtos={prod}
             addToCarrinho={addToCarrinho}
 
             />
