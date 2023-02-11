@@ -1,25 +1,27 @@
+
+import { useState } from "react"
 import CardCarrinho from "./cardCarrinho/CardCarrinho"
 import { MeuCarrin, Titulo } from "./cardCarrinho/carrin"
 
 
 const Carrinho = (props) => {
-    const { name, price, qnt, produtCarinho } = props
-    
-    
+    const { produtCarinho, button, valorTotal, product } = props
+    console.log(valorTotal);
 
-    const renderCarrinho = produtCarinho.map(prod =>{
-       
-    
+
+
+
+    const renderCarrinho = produtCarinho.map(prod => {
+
+
         return (
             <CardCarrinho
-            // key={prod.id}
-            // image={prod.image}
-            price={prod.price}
-            name={prod.name}
-            // product={produ}
-            // name={prod.name}
-            // price={prod.price}
-            qnt={prod.qnt}
+                produtCarinho={produtCarinho}
+                button={button}
+                price={prod.price}
+                name={prod.name}
+                qnt={prod.qnt}
+                key={prod.id}
 
 
             />
@@ -27,10 +29,13 @@ const Carrinho = (props) => {
     }
     )
     return (
-        <MeuCarrin>
-            <Titulo>CARRINHO</Titulo>
-            {renderCarrinho}
-        </MeuCarrin>
+        <>
+            <MeuCarrin>
+                <Titulo>CARRINHO</Titulo>
+                {renderCarrinho}
+            </MeuCarrin>
+            <h2>valor total:{valorTotal}</h2>
+        </>
     )
 }
 export default Carrinho

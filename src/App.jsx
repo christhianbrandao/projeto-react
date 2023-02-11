@@ -1,5 +1,5 @@
 import HomePage from "./componentes/homepage/HomePage";
-import {createGlobalStyle} from "styled-components"
+import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyled = createGlobalStyle`
 *{
