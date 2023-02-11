@@ -1,14 +1,20 @@
-import { ProduCarrinhos } from "./style"
+import { ProduCarrinhos, meuuuBotao } from "./style"
 
 
-const CardCarrinho = (props) =>{
-const { name, price, qnt } = props
+const CardCarrinho = (props) => {
+    const { name, price, qnt, button, produtCarinho, } = props
 
-    return(
+    console.log(produtCarinho);
+
+
+
+    return (
         <ProduCarrinhos>
-           {name}
-           <p>preço:</p>{price}
-           <p>quantidade:</p>{qnt}
+            {name}
+            <p>preço:{price}</p>
+            <p>quantidade:{qnt}</p>
+            <button onClick={() => button(produtCarinho)}>Excluir item</button>
+            
         </ProduCarrinhos>
     )
 }
